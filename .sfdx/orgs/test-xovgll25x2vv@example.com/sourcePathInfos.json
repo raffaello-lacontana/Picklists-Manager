@@ -1,0 +1,693 @@
+[
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592403403461,
+            "changeTime": 1592403403461,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592403403462,
+            "changeTime": 1592403403462,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default",
+            "isDirectory": true,
+            "size": 512,
+            "modifiedTime": 1592488630980,
+            "changeTime": 1592488630980,
+            "contentHash": "4f7af740f83770e02d324a71d5ae0de735eafe98",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/applications",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/applications",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592408092457,
+            "changeTime": 1592408092457,
+            "contentHash": "416ca3f199998d88a576bd21d38792388af8edd6",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura",
+        {
+            "state": "u",
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1592836956427,
+            "changeTime": 1592836956427,
+            "contentHash": "14f182483c8c165c129a5dc339698279c73cc52b"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes",
+            "isDirectory": true,
+            "size": 192,
+            "modifiedTime": 1592818956608,
+            "changeTime": 1592818956608,
+            "contentHash": "de8e3c3309f2f3fc4cd4d638b985267ff793855b",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/contentassets",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/contentassets",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1592403403462,
+            "changeTime": 1592403403462,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/flexipages",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/flexipages",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592408092453,
+            "changeTime": 1592408092453,
+            "contentHash": "dd03abc19bae2f6241bea3dd80c0f4382a09d0bb",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts",
+            "isDirectory": true,
+            "size": 160,
+            "modifiedTime": 1592488486272,
+            "changeTime": 1592488486272,
+            "contentHash": "352fb9ac427109f46f89453339e1d55da8cddac8",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/lwc",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/lwc",
+            "isDirectory": true,
+            "size": 128,
+            "modifiedTime": 1592403416859,
+            "changeTime": 1592403416859,
+            "contentHash": "a973ac1b5be0e216b2a2db1b82ae5ba97f4086f4",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects",
+            "isDirectory": true,
+            "size": 160,
+            "modifiedTime": 1592488536742,
+            "changeTime": 1592488536742,
+            "contentHash": "1f758c2e060a01c269124bf7f3264741c5a21582",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/permissionsets",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/permissionsets",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592408092482,
+            "changeTime": 1592408092482,
+            "contentHash": "98d535bd3575239dea3f7ba61f8006034611a7a8",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/staticresources",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/staticresources",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1592403403462,
+            "changeTime": 1592403403462,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/tabs",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/tabs",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592408092456,
+            "changeTime": 1592408092456,
+            "contentHash": "4cb2109d2a6cc42307d6ff8232c64f71005a2f02",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/triggers",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/triggers",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1592403403462,
+            "changeTime": 1592403403462,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager",
+            "isDirectory": true,
+            "size": 480,
+            "modifiedTime": 1592403414712,
+            "changeTime": 1592403414712,
+            "contentHash": "2218d6ac52298c604d0293e5657b75dae2251d50",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/profiles/Admin.profile-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/profiles/Admin.profile-meta.xml",
+            "isDirectory": false,
+            "size": 19767,
+            "modifiedTime": 1592406992274,
+            "changeTime": 1592406867950,
+            "contentHash": "416b7fa9c96185aa19353446bc5aab8575ae9052",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/profiles",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/profiles",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1592408107416,
+            "changeTime": 1592408107416,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist__c",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist__c",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592407235390,
+            "changeTime": 1592407235390,
+            "contentHash": "1fcaff93e5f70b573879be9841320e9a13f2c3e3",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist__c/Picklist__c.object-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist__c/Picklist__c.object-meta.xml",
+            "isDirectory": false,
+            "size": 5196,
+            "modifiedTime": 1592407235390,
+            "changeTime": 1592407235390,
+            "contentHash": "7b3eb9ed0b01a886f0cf221be9977f69038badf0",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts/Picklist__c-Picklist Layout.layout-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts/Picklist__c-Picklist Layout.layout-meta.xml",
+            "isDirectory": false,
+            "size": 2639,
+            "modifiedTime": 1592486956363,
+            "changeTime": 1592486956363,
+            "contentHash": "c00700cda88e5ac9e4f591589f5058165a0a5cbb",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/Picklist_Value__c.object-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/Picklist_Value__c.object-meta.xml",
+            "isDirectory": false,
+            "size": 5294,
+            "modifiedTime": 1592486956348,
+            "changeTime": 1592486956348,
+            "contentHash": "6465d7c57ff28ff8f350447bf527e30548645d2e",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts/Picklist_Value__c-Picklist Value Layout.layout-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts/Picklist_Value__c-Picklist Value Layout.layout-meta.xml",
+            "isDirectory": false,
+            "size": 2766,
+            "modifiedTime": 1592486956369,
+            "changeTime": 1592486956369,
+            "contentHash": "43168c9b7542bf69875e5bafa6afd27866804058",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c",
+            "isDirectory": true,
+            "size": 128,
+            "modifiedTime": 1592486956348,
+            "changeTime": 1592486956348,
+            "contentHash": "b9132e8658d4bce10c1a255831598b2ff59b9e0d",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/flexipages/Picklists_Manager_UtilityBar.flexipage-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/flexipages/Picklists_Manager_UtilityBar.flexipage-meta.xml",
+            "isDirectory": false,
+            "size": 512,
+            "modifiedTime": 1592408092453,
+            "changeTime": 1592408092453,
+            "contentHash": "f920e9ae76de6dbe4fbe494afda5403dce7d47db",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/tabs/Picklist__c.tab-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/tabs/Picklist__c.tab-meta.xml",
+            "isDirectory": false,
+            "size": 194,
+            "modifiedTime": 1592408092456,
+            "changeTime": 1592408092456,
+            "contentHash": "8def6884155506a35648967bc9eb03bc4a776e4a",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/applications/Picklists_Manager.app-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/applications/Picklists_Manager.app-meta.xml",
+            "isDirectory": false,
+            "size": 656,
+            "modifiedTime": 1592408092457,
+            "changeTime": 1592408092457,
+            "contentHash": "84d9751443086c6917c13439134e2281cf926568",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/permissionsets/Picklists_Manager.permissionset-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/permissionsets/Picklists_Manager.permissionset-meta.xml",
+            "isDirectory": false,
+            "size": 1820,
+            "modifiedTime": 1592487125479,
+            "changeTime": 1592487125479,
+            "contentHash": "599e0ad470755d58f7d841e238afeb7ad562bcd8",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/appMenus/AppSwitcher.appMenu-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/appMenus/AppSwitcher.appMenu-meta.xml",
+            "isDirectory": false,
+            "size": 2130,
+            "modifiedTime": 1592408312958,
+            "changeTime": 1592408092484,
+            "contentHash": "6722008e13dbca71a4bd8e2e3fd9206c9fb150cc",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/appMenus",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/appMenus",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1592408307537,
+            "changeTime": 1592408092484,
+            "contentHash": "7c65d70563206b380e20367663fe2cc611131a2d",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/API_Name__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/API_Name__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 361,
+            "modifiedTime": 1592486956348,
+            "changeTime": 1592486956348,
+            "contentHash": "c338b912bfd9e85bb23f555b1121b1884323b10a",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Default__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Default__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 320,
+            "modifiedTime": 1592486956349,
+            "changeTime": 1592486956349,
+            "contentHash": "df5eee3f689e455bd6f0da21bf8294794af2e4db",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Is_Active__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Is_Active__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 323,
+            "modifiedTime": 1592486956349,
+            "changeTime": 1592486956349,
+            "contentHash": "dfdf4ba3f2a093c3eaa4c96de5bc49ee05f0046a",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Label__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Label__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 355,
+            "modifiedTime": 1592486956349,
+            "changeTime": 1592486956349,
+            "contentHash": "d2158a4c2037c21d8b56b10bd442e15ab00a9052",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Picklist__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields/Picklist__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 615,
+            "modifiedTime": 1592486956350,
+            "changeTime": 1592486956350,
+            "contentHash": "ca96430d803b29e2eae8126b01312b527a256955",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Value__c/fields",
+            "isDirectory": true,
+            "size": 224,
+            "modifiedTime": 1592486956350,
+            "changeTime": 1592486956350,
+            "contentHash": "789075440b2b8c1c0c7169a62f8e8fa6c73860a3",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/Picklist_Field__c.object-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/Picklist_Field__c.object-meta.xml",
+            "isDirectory": false,
+            "size": 5294,
+            "modifiedTime": 1592488486264,
+            "changeTime": 1592488486264,
+            "contentHash": "076c9fd962b1fd50e06f9d155d4ecb4ecec5d61e",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields/Field_Developer_Name__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields/Field_Developer_Name__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 385,
+            "modifiedTime": 1592488486266,
+            "changeTime": 1592488486266,
+            "contentHash": "11a11c3a255423befc31235887a0b6882f884dbc",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields/Object_Developer_Name__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields/Object_Developer_Name__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 387,
+            "modifiedTime": 1592488486266,
+            "changeTime": 1592488486266,
+            "contentHash": "fbed1935e3b1b3853154d3a797048850b4b74d0c",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields/Picklist__c.field-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields/Picklist__c.field-meta.xml",
+            "isDirectory": false,
+            "size": 615,
+            "modifiedTime": 1592488486266,
+            "changeTime": 1592488486266,
+            "contentHash": "11d455c2eeecb2743b1a58165e5d0ddb5886fb56",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts/Picklist_Field__c-Picklist Field Layout.layout-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/layouts/Picklist_Field__c-Picklist Field Layout.layout-meta.xml",
+            "isDirectory": false,
+            "size": 2518,
+            "modifiedTime": 1592488486272,
+            "changeTime": 1592488486272,
+            "contentHash": "de7903a39c1eff6353be255be85922b7f0529b0c",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c",
+            "isDirectory": true,
+            "size": 128,
+            "modifiedTime": 1592488486265,
+            "changeTime": 1592488486265,
+            "contentHash": "ec54027518b63b8de75a80e940bac4f5668b6181",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/objects/Picklist_Field__c/fields",
+            "isDirectory": true,
+            "size": 160,
+            "modifiedTime": 1592488486266,
+            "changeTime": 1592488486266,
+            "contentHash": "6f8f08f6c9dd9924cec1415ed16cb6a874d78629",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/MetadataService.cls",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/MetadataService.cls",
+            "isDirectory": false,
+            "size": 993725,
+            "modifiedTime": 1592492005698,
+            "changeTime": 1592492005698,
+            "contentHash": "9e973cd08040f0918a92d06a74311fb0c573dd5b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/MetadataService.cls-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/MetadataService.cls-meta.xml",
+            "isDirectory": false,
+            "size": 174,
+            "modifiedTime": 1592491994964,
+            "changeTime": 1592491994964,
+            "contentHash": "b14927db8433719a949fb732f84be0e1c5bd19cd",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/PicklistsManagerUtils.cls",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/PicklistsManagerUtils.cls",
+            "isDirectory": false,
+            "size": 6363,
+            "modifiedTime": 1592834011922,
+            "changeTime": 1592834011922,
+            "contentHash": "62d8a84a6f2c598ae8cbf0b4d6eb3b95749cfd7b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/PicklistsManagerUtils.cls-meta.xml",
+        {
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/classes/PicklistsManagerUtils.cls-meta.xml",
+            "isDirectory": false,
+            "size": 174,
+            "modifiedTime": 1592492278435,
+            "changeTime": 1592492278435,
+            "contentHash": "b14927db8433719a949fb732f84be0e1c5bd19cd",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButton.cmp-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButton.cmp-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 228,
+            "modifiedTime": 1592836956428,
+            "changeTime": 1592836956428,
+            "contentHash": "3777eb7c800ff2e217c3589385e773598ea24428"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButtonController.js",
+        {
+            "state": "u",
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButtonController.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 60,
+            "modifiedTime": 1592836956430,
+            "changeTime": 1592836956430,
+            "contentHash": "9fc7736232d1d9d7a40c4cea1d6b22e712d8f8b1"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButtonHelper.js",
+        {
+            "state": "u",
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButtonHelper.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 40,
+            "modifiedTime": 1592836956430,
+            "changeTime": 1592836956430,
+            "contentHash": "c3c6efda41de64b759982510d6a2c72226aa087f"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButton.cmp",
+        {
+            "state": "u",
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton/PicklistsMangerSynchButton.cmp",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 77,
+            "modifiedTime": 1592836956431,
+            "changeTime": 1592836956431,
+            "contentHash": "1bd3e43c9af0aec549aeec35d01bc7a23d3b9a12"
+        }
+    ],
+    [
+        "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton",
+        {
+            "state": "u",
+            "sourcePath": "/Users/rlacontana/Documents/sfdx/Picklists Manager/force-app/main/default/aura/PicklistsMangerSynchButton",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 192,
+            "modifiedTime": 1592836956431,
+            "changeTime": 1592836956431,
+            "contentHash": "2a8645738d99e795d3391bf90ae1693ee04a63a2"
+        }
+    ]
+]
