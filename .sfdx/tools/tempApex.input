@@ -1,5 +1,0 @@
-Map<String, String> picklistValuesToInsert = new Map<String, String>();
-picklistValuesToInsert.put('FI', 'Firenze');
-picklistValuesToInsert.put('FG', 'Foggia');
-
-PicklistsManagerUtils.updateValueSet(picklistValuesToInsert, 'Account', 'Provincia__c');
