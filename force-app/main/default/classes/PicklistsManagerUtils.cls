@@ -1,7 +1,26 @@
 public with sharing class PicklistsManagerUtils {
+
+
+    public static void synchronizePicklist(Id recordId) {
+        Map<String, String> picklistValuesToInsert = getPicklistValuesToInsert(recordId);
+        List<Picklist_Field__c> picklistFields = getPicklistFields(recordId);
+        System.enqueueJob(new PicklistsManagerQueueable(picklistValuesToInsert, picklistFields));
+    }
+
+    private static Map<String, String> getPicklistValuesToInsert(Id recordId) {
+        Map<String, String> retValue = new Map<String, String>();
+        for(Picklist_Value__c pv : [SELECT API_Name__c, Label__c FROM Picklist_Value__c]) {
+            retValue.put(pv.API_Name__c, pv.Label__c);
+        }
+        return retValue;
+    }
+
+    private static List<Picklist_Field__c> getPicklistFields(Id recordId) {
+        return [SELECT Object_Developer_Name__c, Field_Developer_Name__c FROM Picklist_Field__c WHERE Picklist__c = :recordId];
+    }
     
     /* Utilizza la libreria apex-mdapi (https://github.com/financialforcedev/apex-mdapi) per inserire o aggiornare i valori di una picklist */
-    @future(callout = true)
+    //@future(callout = true)
     public static void updateValueSet(Map<String, String> picklistValuesToInsert, String sObjectDeveloperName, String fieldDeveloperName ) {
         MetadataService.MetadataPort mdapi = new MetadataService.MetadataPort();
         mdapi.SessionHeader = new MetadataService.SessionHeader_element();
@@ -69,40 +88,6 @@ public with sharing class PicklistsManagerUtils {
             
             fieldMdApi.valueSet.valueSetDefinition.value.add(value);
         }
-
-        /*for(MetadataUtils.RecordType recordType : recordTypeMd){
-
-            for(MetadataService.RecordTypePicklistValue picklist : recordType.picklistValues){
-                
-                MetadataService.RecordTypePicklistValue rtPicklist = new GVS_MetadataUtils.RecordTypePicklistValue();
-
-                    Map<String, GVS_MetadataUtils.PicklistValue> mapValues = new Map<String, GVS_MetadataUtils.PicklistValue>();
-                    for(GVS_MetadataUtils.PicklistValue picklistValue : picklist.values){
-                        // mapValues.put(picklistValue.fullName, picklistValue);
-                        mapValues.put(EncodingUtil.urlDecode(picklistValue.fullName, 'UTF-8'), picklistValue);
-                    }
-                    for(GVS_MetadataUtils.CustomValue value : mapGlobalValueSetMD.get(mapRecordTypePicklist.get(recordType.fullName).get(picklist.picklist)).customValue){
-                        if(value.isActive != false){
-                        if(mapValues.containsKey(value.fullName)){
-                            mapValues.get(value.fullName).isActive = value.isActive;
-                        } else {
-                            GVS_MetadataUtils.PicklistValue pv = new GVS_MetadataUtils.PicklistValue();
-                            pv.fullName = value.fullName;
-                            pv.isActive = value.isActive;
-                            pv.description = value.description;
-                            pv.default_x = value.default_x;
-                            picklist.values.add(pv);
-                            mapValues.put(pv.fullName, pv);
-                        }
-                        }
-                    }
-                    rt.picklistValues.add(picklist);     
-                //}
-              }
-              updateRecordType.add(rt);
-            }
-          }*/
-        
         
         List<MetadataService.Metadata> metaDataToUpdate = new List<MetadataService.Metadata>();
         metaDataToUpdate.add(fieldMdApi);
