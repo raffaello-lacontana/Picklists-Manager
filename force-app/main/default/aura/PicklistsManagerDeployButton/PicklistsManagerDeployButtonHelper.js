@@ -1,7 +1,6 @@
 ({
-	synch : function(component, event, helper) {
-        console.log('PASSA DI QUI');
-        var action = component.get("c.synch");
+	deploy : function(component, event, helper) {
+        var action = component.get("c.deploy");
         action.setParams({ recordId : component.get("v.recordId") });
         action.setCallback(this, function(response) {
             var state = response.getState();

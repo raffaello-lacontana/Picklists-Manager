@@ -6,4 +6,5 @@
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
 
-PicklistsManagerUtils.synchronizePicklist('a001j000005iQd6AAE');
+PicklistsManagerUtils.deployPicklist('a001j000005iQd6AAE');
+PicklistsManagerUtils.deployPicklistDependency('a041j000008kx1oAAA');

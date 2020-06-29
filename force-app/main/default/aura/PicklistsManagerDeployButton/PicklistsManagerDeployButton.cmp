@@ -1,11 +1,11 @@
-<aura:component implements="force:lightningQuickAction, force:hasRecordId" controller="PicklistsManagerSynchButtonCtrl">
+<aura:component implements="force:lightningQuickAction, force:hasRecordId" controller="PicklistsManagerDeployButtonCtrl">
     <aura:attribute name="recordId" type="String"/>
     
     <div class="slds-text-align_center slds-p-around_medium">
         Are you sure?
     </div>
     <div class="slds-text-align_center slds-p-around_medium">
-        <lightning:button variant="brand" label="Synchronize" title="Synchronize" onclick="{!c.handleSynch}"/>
+        <lightning:button variant="brand" label="Deploy" title="Deploy" onclick="{!c.handleDeploy}"/>
     </div>
     
 </aura:component>

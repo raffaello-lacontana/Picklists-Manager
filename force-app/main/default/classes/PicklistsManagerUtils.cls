@@ -1,11 +1,18 @@
 public with sharing class PicklistsManagerUtils {
 
-
-    public static Id synchronizePicklist(Id recordId) {
+    /* Deploy picklists */
+    public static Id deployPicklist(Id recordId) {
         Map<String, Picklist_Value__c> picklistValuesToInsert = getPicklistValuesToInsert(recordId);
         List<Picklist_Field__c> picklistFields = getPicklistFields(recordId);
         Id jobId = System.enqueueJob(new PicklistsManagerQueueable(picklistValuesToInsert, picklistFields));
         return jobId;
+    }
+
+    /* Deploy picklist dependencies */
+    public static void deployPicklistDependency(Id recordId) {
+        Picklist_Dependency__c pd = [SELECT Object_Developer_Name__c, Controlling_Field_Developer_Name__c, Dependent_Field_Developer_Name__c FROM Picklist_Dependency__c WHERE Id = :recordId];
+        List<Picklist_Dependency_Value__c> pdvs = [SELECT Controlling_Field_Value__c, Dependent_Field_Value__c  FROM Picklist_Dependency_Value__c WHERE Picklist_dependency__c = :pd.Id];
+        updatePicklistDependency(pd, pdvs);
     }
 
     private static Map<String, Picklist_Value__c> getPicklistValuesToInsert(Id recordId) {
@@ -28,38 +35,67 @@ public with sharing class PicklistsManagerUtils {
         mdapi.SessionHeader = new MetadataService.SessionHeader_element();
         mdapi.SessionHeader.sessionId = UserInfo.getSessionId();
         
-        // MetadataService.CustomField fieldMetadata = getFieldMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
-        // List<MetadataService.RecordType> recordTypeMetadata = getRecordTypeMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
+        MetadataService.CustomField fieldMetadata = getFieldMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
+        List<MetadataService.RecordType> recordTypeMetadata = getRecordTypeMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
      
-        // metaDataToUpdate.add(fieldMetadata);
-        // if(recordTypeMetadata != null) {
-        //     metaDataToUpdate.addAll(recordTypeMetadata);
-        // }
+        metaDataToUpdate.add(fieldMetadata);
+        if(recordTypeMetadata != null) {
+            metaDataToUpdate.addAll(recordTypeMetadata);
+        }
         
 
-        // mdapi.updateMetadata(metaDataToUpdate);
+        mdapi.updateMetadata(metaDataToUpdate);
+    }
 
-        MetadataService.CustomField fieldMetadataDependency = getFieldMetadataDependency(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
+    public static void updatePicklistDependency(Picklist_Dependency__c pd, List<Picklist_Dependency_Value__c> pdvs) {
+        List<MetadataService.Metadata> metaDataToUpdate = new List<MetadataService.Metadata>();
+        MetadataService.MetadataPort mdapi = new MetadataService.MetadataPort();
+        mdapi.SessionHeader = new MetadataService.SessionHeader_element();
+        mdapi.SessionHeader.sessionId = UserInfo.getSessionId();
+
+        MetadataService.CustomField fieldMetadataDependency = getFieldMetadataDependency(pdvs, pd.Object_Developer_Name__c, pd.Controlling_Field_Developer_Name__c, pd.Dependent_Field_Developer_Name__c, mdapi);
         metaDataToUpdate.add(fieldMetadataDependency);
         mdapi.updateMetadata(metaDataToUpdate);
     }
 
-    private static MetadataService.CustomField getFieldMetadataDependency(Map<String, Picklist_Value__c> picklistValuesToInsert, String sObjectDeveloperName, String fieldDeveloperName, MetadataService.MetadataPort mdapi) {
-        Map<String, Picklist_Value__c> picklistValues = picklistValuesToInsert.clone();
-        MetadataService.CustomField customField = (MetadataService.CustomField)mdapi.readMetadata('CustomField', new List<String>{ 'Case' + '.' + 'ATO__c' }).getRecords()[0];
+    private static MetadataService.CustomField getFieldMetadataDependency(List<Picklist_Dependency_Value__c> pdvs, String sObjectDeveloperName, String controllingFieldDeveloperName, String dependentFieldDeveloperName, MetadataService.MetadataPort mdapi) {
+        
+        // Map Dependent Value -> List Controlling Values
+        Map<String, List<String>> valuesMap = new Map<String, List<String>>();
+        for(Picklist_Dependency_Value__c pdv : pdvs) {
+            if(valuesMap.get(pdv.Dependent_Field_Value__c) == null) {
+                valuesMap.put(pdv.Dependent_Field_Value__c, new List<String>());
+            }
+            valuesMap.get(pdv.Dependent_Field_Value__c).add(pdv.Controlling_Field_Value__c);
+        }
+        
+        MetadataService.CustomField customField = (MetadataService.CustomField)mdapi.readMetadata('CustomField', new List<String>{ sObjectDeveloperName + '.' + dependentFieldDeveloperName }).getRecords()[0];
         System.debug('MIODEBUG1 CustomField: ' + customField);
         System.debug('MIODEBUG1 CustomField.fullName: ' + customField.fullName);
         System.debug('MIODEBUG2 CustomField.valueSet.controllingField: ' + customField.valueSet.controllingField);
         System.debug('MIODEBUG2 CustomField.valueSet.restricted: ' + customField.valueSet.restricted);
+
+        customField.valueSet.controllingField = controllingFieldDeveloperName; // Es. Comune__c
+
+        List<MetadataService.ValueSettings> valueSettings = new List<MetadataService.ValueSettings>();
+        for(String dependentFieldValue : valuesMap.keySet()) {
+            MetadataService.ValueSettings valueSetting = new MetadataService.ValueSettings();
+            valueSetting.valueName = dependentFieldValue;
+            valueSetting.controllingFieldValue = new List<String>();
+            for(String controllingFieldValue : valuesMap.get(dependentFieldValue)) {
+                valueSetting.controllingFieldValue.add(controllingFieldValue);    
+            }
+            valueSettings.add(valueSetting);
+        }
+
+        customField.valueSet.valueSettings = valueSettings;
         for(MetadataService.ValueSettings valueSetting: customField.valueSet.valueSettings) {
-            System.debug('MIODEBUG3 CustomField.valueSet.valueSetName.valueSetting.valueName: ' + valueSetting.valueName);
+            System.debug('MIODEBUG3 CustomField.valueSet.valueSetName.valueSetting.valueName: ' + valueSetting.valueName); // Es. MI
             for(String controllingFieldValue : valueSetting.controllingFieldValue) {
-                System.debug('MIODEBUG4 controllingFieldValue: ' + controllingFieldValue);
+                System.debug('MIODEBUG4 controllingFieldValue: ' + controllingFieldValue); // Es. Abbiategrasso
             }
         }
-        customField.valueSet.valueSettings.get(0).controllingFieldValue.clear();
-        System.debug('MIODEBUG5: ' + customField.valueSet.valueSettings.get(0).controllingFieldValue);
-        //customField.valueSet.valueSettings.clear();
+
         return customField;
     }
 
