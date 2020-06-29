@@ -5,10 +5,5 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-/*Map<String, String> picklistValuesToInsert = new Map<String, String>();
-picklistValuesToInsert.put('FI', 'Firenze');
-picklistValuesToInsert.put('FG', 'Foggia');
 
-PicklistsManagerUtils.updateValueSet(picklistValuesToInsert, 'Account', 'Provincia__c');*/
-
-PicklistsManagerUtils.synchronizePicklist('a001j000005LGn5AAG');
+PicklistsManagerUtils.synchronizePicklist('a001j000005iQd6AAE');

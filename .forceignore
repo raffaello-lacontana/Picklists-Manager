@@ -14,3 +14,4 @@ package.xml
 
 force-app/main/default/profiles/**
 force-app/main/default/objects/Account
+force-app/main/default/objects/Case

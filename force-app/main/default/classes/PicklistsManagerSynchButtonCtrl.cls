@@ -2,7 +2,7 @@ public with sharing class PicklistsManagerSynchButtonCtrl {
     
 
     @AuraEnabled
-    public static String synch(Id recordId) {
-        return null;
+    public static Id synch(Id recordId) {
+        return PicklistsManagerUtils.synchronizePicklist(recordId);
     }
 }

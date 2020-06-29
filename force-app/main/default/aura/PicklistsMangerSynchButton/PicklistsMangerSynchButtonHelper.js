@@ -1,12 +1,13 @@
 ({
 	synch : function(component, event, helper) {
-
+        console.log('PASSA DI QUI');
         var action = component.get("c.synch");
-        action.setParams({ firstName : component.get("v.recordId") });
+        action.setParams({ recordId : component.get("v.recordId") });
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
-                alert("From server: " + response.getReturnValue());
+                $A.get("e.force:closeQuickAction").fire();
+                console.log(response.getReturnValue());
             }
             else if (state === "INCOMPLETE") {
             }

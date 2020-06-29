@@ -1,9 +1,9 @@
 public class PicklistsManagerQueueable implements Queueable, Database.AllowsCallouts {
 
-    private Map<String, String> picklistValuesToInsert;
+    private Map<String, Picklist_Value__c> picklistValuesToInsert;
     private List<Picklist_Field__c> picklistFields;
 
-    public PicklistsManagerQueueable(Map<String, String> picklistValuesToInsert, List<Picklist_Field__c> picklistFields){
+    public PicklistsManagerQueueable(Map<String, Picklist_Value__c> picklistValuesToInsert, List<Picklist_Field__c> picklistFields){
         this.picklistValuesToInsert = picklistValuesToInsert;
         this.picklistFields = picklistFields;   
     }
