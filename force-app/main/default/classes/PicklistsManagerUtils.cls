@@ -4,15 +4,16 @@ public with sharing class PicklistsManagerUtils {
     public static Id deployPicklist(Id recordId) {
         Map<String, Picklist_Value__c> picklistValuesToInsert = getPicklistValuesToInsert(recordId);
         List<Picklist_Field__c> picklistFields = getPicklistFields(recordId);
-        Id jobId = System.enqueueJob(new PicklistsManagerQueueable(picklistValuesToInsert, picklistFields));
+        Id jobId = System.enqueueJob(new PicklistsManagerQueueable(recordId, picklistValuesToInsert, picklistFields));
         return jobId;
     }
 
     /* Deploy picklist dependencies */
-    public static void deployPicklistDependency(Id recordId) {
+    public static Id deployPicklistDependency(Id recordId) {
         Picklist_Dependency__c pd = [SELECT Object_Developer_Name__c, Controlling_Field_Developer_Name__c, Dependent_Field_Developer_Name__c FROM Picklist_Dependency__c WHERE Id = :recordId];
         List<Picklist_Dependency_Value__c> pdvs = [SELECT Controlling_Field_Value__c, Dependent_Field_Value__c  FROM Picklist_Dependency_Value__c WHERE Picklist_dependency__c = :pd.Id];
-        updatePicklistDependency(pd, pdvs);
+        Id jobId = System.enqueueJob(new PicklistsManagerQueueable(recordId, pd, pdvs));
+        return jobId;
     }
 
     private static Map<String, Picklist_Value__c> getPicklistValuesToInsert(Id recordId) {

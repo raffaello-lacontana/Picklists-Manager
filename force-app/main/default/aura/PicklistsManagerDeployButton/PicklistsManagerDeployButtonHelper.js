@@ -5,6 +5,13 @@
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    mode: 'dismissible',
+                    type: 'success',
+                    message: 'Success! The JobId is ' + response.getReturnValue()
+                });
+                toastEvent.fire();
                 $A.get("e.force:closeQuickAction").fire();
                 console.log(response.getReturnValue());
             }
