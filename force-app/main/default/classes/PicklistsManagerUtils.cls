@@ -28,16 +28,39 @@ public with sharing class PicklistsManagerUtils {
         mdapi.SessionHeader = new MetadataService.SessionHeader_element();
         mdapi.SessionHeader.sessionId = UserInfo.getSessionId();
         
-        MetadataService.CustomField fieldMetadata = getFieldMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
-        List<MetadataService.RecordType> recordTypeMetadata = getRecordTypeMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
+        // MetadataService.CustomField fieldMetadata = getFieldMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
+        // List<MetadataService.RecordType> recordTypeMetadata = getRecordTypeMetadata(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
      
-        metaDataToUpdate.add(fieldMetadata);
-        if(recordTypeMetadata != null) {
-            metaDataToUpdate.addAll(recordTypeMetadata);
-        }
+        // metaDataToUpdate.add(fieldMetadata);
+        // if(recordTypeMetadata != null) {
+        //     metaDataToUpdate.addAll(recordTypeMetadata);
+        // }
         
 
+        // mdapi.updateMetadata(metaDataToUpdate);
+
+        MetadataService.CustomField fieldMetadataDependency = getFieldMetadataDependency(picklistValuesToInsert, sObjectDeveloperName, fieldDeveloperName, mdapi);
+        metaDataToUpdate.add(fieldMetadataDependency);
         mdapi.updateMetadata(metaDataToUpdate);
+    }
+
+    private static MetadataService.CustomField getFieldMetadataDependency(Map<String, Picklist_Value__c> picklistValuesToInsert, String sObjectDeveloperName, String fieldDeveloperName, MetadataService.MetadataPort mdapi) {
+        Map<String, Picklist_Value__c> picklistValues = picklistValuesToInsert.clone();
+        MetadataService.CustomField customField = (MetadataService.CustomField)mdapi.readMetadata('CustomField', new List<String>{ 'Case' + '.' + 'ATO__c' }).getRecords()[0];
+        System.debug('MIODEBUG1 CustomField: ' + customField);
+        System.debug('MIODEBUG1 CustomField.fullName: ' + customField.fullName);
+        System.debug('MIODEBUG2 CustomField.valueSet.controllingField: ' + customField.valueSet.controllingField);
+        System.debug('MIODEBUG2 CustomField.valueSet.restricted: ' + customField.valueSet.restricted);
+        for(MetadataService.ValueSettings valueSetting: customField.valueSet.valueSettings) {
+            System.debug('MIODEBUG3 CustomField.valueSet.valueSetName.valueSetting.valueName: ' + valueSetting.valueName);
+            for(String controllingFieldValue : valueSetting.controllingFieldValue) {
+                System.debug('MIODEBUG4 controllingFieldValue: ' + controllingFieldValue);
+            }
+        }
+        customField.valueSet.valueSettings.get(0).controllingFieldValue.clear();
+        System.debug('MIODEBUG5: ' + customField.valueSet.valueSettings.get(0).controllingFieldValue);
+        //customField.valueSet.valueSettings.clear();
+        return customField;
     }
 
     private static MetadataService.CustomField getFieldMetadata(Map<String, Picklist_Value__c> picklistValuesToInsert, String sObjectDeveloperName, String fieldDeveloperName, MetadataService.MetadataPort mdapi) {
