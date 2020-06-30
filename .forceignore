@@ -11,7 +11,7 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-
+force-app/main/default/appMenus/
 force-app/main/default/profiles/**
 force-app/main/default/objects/Account
 force-app/main/default/objects/Case
